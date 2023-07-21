@@ -17,10 +17,15 @@ import os
 import json
 import csv
 import pickle
+import sys
 
 xxx = os.getcwd()
-# from Pogruzhenie_v_python.Rabota_s_failami import task6   # раскоментировать для создания файлов в папке new_dir и директорий в ней
+os.chdir('..')
+sys.path.append(os.getcwd())
 os.chdir(xxx)
+# from Rabota_s_failami import task6 # раскоментировать для создания файлов в папке new_dir и директорий в ней
+os.chdir(xxx)
+
 
 OUR_WAY = 'new_dir'
 new_dict = {}
@@ -28,6 +33,8 @@ N = 1
 
 
 def directories(dir_):
+    if dir_ not in os.listdir():
+        os.mkdir(dir_)
     os.chdir(dir_)
     global N
     for file in os.listdir():

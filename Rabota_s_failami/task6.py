@@ -2,9 +2,11 @@
 # Генерируйте файлы в указанную директорию - отдельный параметр функции.
 # Отсутствие/наличие директории не должно вызывать ошибок в работе функции (добавьте проверки).
 # Существующие файла не должны удаляться/изменяться в случае совпадения имён.
+import os
+import sys
 
-
-from Pogruzhenie_v_python.Rabota_s_failami.task4 import fails
+sys.path.append(os.getcwd())
+from Rabota_s_failami.task4 import fails
 
 
 def fails3(str1):
